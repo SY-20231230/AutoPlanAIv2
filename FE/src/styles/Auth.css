@@ -1,0 +1,170 @@
+.auth-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: #b0caff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.auth-form {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  padding: 0;
+}
+
+.login-icon {
+  margin-bottom: 2.6rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #226afc;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1.5px solid #fff;
+  border-radius: 7px;
+  margin-bottom: 1.15rem;
+  background: transparent;
+  padding: 0 0.6rem;
+  height: 54px;
+  box-sizing: border-box;
+}
+
+.input-icon {
+  color: #fff;
+  margin-right: 0.8rem;
+  font-size: 1.16rem;
+}
+.input-line input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.09rem;
+  font-family: inherit;
+  padding: 0;
+}
+.input-line input::placeholder {
+  color: #e1eaf7;
+}
+
+.main-login-btn {
+  width: 100%;
+  padding: 1.1rem 0;
+  border: none;
+  border-radius: 7px;
+  background: #fff;
+  color: #226afc;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0.3rem 0 1.1rem 0;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.13s, color 0.13s;
+}
+.main-login-btn:hover {
+  background: #e7eeff;
+  color: #1749aa;
+}
+
+.gmail-btn {
+  width: 100%;
+  padding: 1.05rem 0;
+  border: 1.3px solid #fff;
+  border-radius: 7px;
+  background: transparent;
+  color: #fff;
+  font-size: 1.07rem;
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background 0.13s, color 0.13s;
+}
+.gmail-btn:hover {
+  background: #f5fafd;
+  color: #226afc;
+}
+
+.gmail-logo {
+  font-size: 1.1em;
+}
+
+.auth-error {
+  color: #ff5555;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.login-link {
+  color: #fff;
+  font-size: 1.05rem;
+  text-align: center;
+  margin-top: 0.3rem;
+  font-weight: 400;
+}
+.login-link span {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-position: under;
+  opacity: 0.87;
+  color: #fff;
+  font-weight: 600;
+}
+.login-link span:hover {
+  color: #e2eaf7;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .auth-form {
+    width: 96vw;
+    min-width: 0;
+    max-width: 99vw;
+    padding: 0 2vw;
+  }
+}
+
+/* Auth.css 하단에 추가 */
+.password-eye-icon {
+  font-size: 1.1rem;
+  user-select: none;
+  transition: color 0.2s;
+}
+.password-eye-icon:hover {
+  color: #2b50ec;
+}
+
+.check-btn {
+  margin-left: 0.6rem;
+  padding: 0.45rem 1.2rem;
+  border: 1.3px solid #fff;
+  background: #fff;
+  color: #226afc;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.97rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s, color 0.15s, border 0.13s;
+  white-space: nowrap;
+  height: 2.1rem;
+  display: flex;
+  align-items: center;
+}
+.check-btn:hover {
+  background: #226afc;
+  color: #fff;
+  border: 1.3px solid #226afc;
+}

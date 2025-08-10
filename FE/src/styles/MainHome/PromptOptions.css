@@ -1,0 +1,16 @@
+/* src/styles/MainHome/PromptOptions.css */
+.prompt-options {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.prompt-options h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+.prompt-options p {
+  font-size: 0.95rem;
+  color: #555;
+}

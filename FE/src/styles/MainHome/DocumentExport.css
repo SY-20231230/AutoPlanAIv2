@@ -1,0 +1,23 @@
+/* src/styles/MainHome/DocumentExport.css */
+.doc-export {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.doc-export h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.doc-export button {
+  background-color: #10b981;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
