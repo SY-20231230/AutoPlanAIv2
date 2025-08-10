@@ -3,3 +3,4 @@ src
 components!
 pages
 styles
+App.js
