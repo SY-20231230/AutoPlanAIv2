@@ -1,0 +1,16 @@
+/* src/styles/MainHome/ProjectSimilarity.css */
+.similarity-check {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.similarity-check h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+.similarity-check p {
+  font-size: 0.95rem;
+  color: #555;
+}

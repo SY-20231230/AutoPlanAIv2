@@ -1,0 +1,210 @@
+/* ProjectDetailModal.css */
+
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 600px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+
+.modal-content.large {
+  width: 720px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.modal-content textarea,
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1.3px solid #e0e0e0;
+  border-radius: 0.6rem;
+  resize: vertical;
+  box-sizing: border-box;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.modal-content input[type="text"] {
+  height: 2.5rem;
+}
+
+.modal-content textarea[readonly] {
+  background-color: #f8fafc;
+  color: #555;
+  cursor: not-allowed;
+}
+
+.modal-content button {
+  background-color: #226afc;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.6rem 1.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.modal-content button:hover {
+  background-color: #1649ad;
+}
+
+.modal-content > div > button {
+  margin-right: 0.5rem;
+}
+
+.modal-content > div > button:last-child {
+  background-color: #aaa;
+}
+
+.modal-content > div > button:last-child:hover {
+  background-color: #888;
+}
+
+.modal-content div[style*="display: flex"] > button {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  height: 2.4rem;
+  align-self: center;
+}
+.fixed-textarea {
+  width: 100%;
+  height: 240px; /* 고정 높이 */
+  resize: none;
+  overflow-y: auto; /* 내용이 넘치면 스크롤 */
+  padding: 1rem;
+  border-radius: 0.8rem;
+  border: 1.3px solid #e0e0e0;
+  background: #f8fafc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.team-member-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-member-row input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1.3px solid #ccc;
+  font-size: 1rem;
+}
+
+.team-member-row button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.add-team-btn {
+  background: #226afc;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.add-team-btn:hover {
+  background: #1649ad;
+}
+
+.modal-actions {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.modal-actions button {
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-actions button:first-child {
+  background: #226afc;
+  color: white;
+}
+
+.modal-actions button:first-child:hover {
+  background: #1649ad;
+}
+
+.cancel-btn {
+  margin-left: 1rem;
+  background: #ccc;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background: #999;
+}
+
+/* 배경 투명 레이어 */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 모달 박스 기본 스타일 */
+.modal-content {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 600px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content.large {
+  width: 700px;
+}
