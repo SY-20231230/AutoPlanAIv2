@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "path": "sql/schema/01_users.sql",
+      "brief": "사용자 계정, 프로필, 인증 정보를 관리하는 'users' 테이블을 생성합니다."
+    },
+    {
+      "path": "sql/schema/02_allergies.sql",
+      "brief": "알레르기 종류(땅콩, 밀 등) 마스터 테이블 'allergens'와 사용자와의 관계를 정의하는 'user_allergies' 테이블을 생성합니다."
+    },
+    {
+      "path": "sql/schema/03_points_of_interest.sql",
+      "brief": "관광지, 맛집, 숙소 등 모든 장소(POI)의 기본 정보(이름, 좌표, 주소, 카테고리, 이미지)를 저장하는 'points_of_interest' 테이블을 생성합니다."
+    },
+    {
+      "path": "sql/schema/04_popup_stores.sql",
+      "brief": "기간 한정으로 운영되는 팝업스토어 정보(이름, 기간, 장소)를 별도로 관리하는 'popup_stores' 테이블을 생성합니다."
+    },
+    {
+      "path": "sql/schema/05_trips.sql",
+      "brief": "사용자가 생성한 전체 여행 계획의 메타데이터(여행 이름, 목적지, 기간)와 해당 여행의 상세 선호도(컨셉, 예산, 동행자, 교통수단 등)를 저장하는 'trips' 테이블을 생성합니다."
+    },
+    {
+      "path": "sql/schema/06_itinerary_events.sql",
+      "brief": "생성된 여행 일정표의 각 항목(날짜별, 시간대별 활동, 예상 비용, 이동수단)을 저장하는 'itinerary_events' 테이블을 생성합니다. 'trips'와 'points_of_interest'를 연결하는 핵심 테이블입니다."
+    },
+    {
+      "path": "sql/schema/07_ai_chat_sessions.sql",
+      "brief": "사용자와 AI 간의 대화 기록을 저장하여 컨텍스트를 유지하고 재사용하기 위한 'ai_chat_sessions' 테이블을 생성합니다."
+    },
+    {
+      "path": "sql/schema/08_bookings.sql",
+      "brief": "[확장 기능] 외부 서비스와 연동된 예약 정보(숙소, 렌터카 등)를 관리하는 'bookings' 테이블과 관련 결제 정보를 저장하는 'payments' 테이블을 생성합니다."
+    },
+    {
+      "path": "sql/performance/01_create_indexes.sql",
+      "brief": "자주 조회되는 외래 키(FK), 지리적 좌표(GIS), 날짜 컬럼 등에 인덱스를 생성하여 데이터베이스 쿼리 성능을 최적화합니다."
+    },
+    {
+      "path": "sql/seed/01_seed_allergens.sql",
+      "brief": "서비스 초기 구동에 필요한 기본 데이터인 19가지 알레르기 항목을 'allergens' 테이블에 미리 삽입합니다."
+    }
+  ]
+}

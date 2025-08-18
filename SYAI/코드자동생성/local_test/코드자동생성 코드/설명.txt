@@ -1,0 +1,2 @@
+test_client2는 현재 가장 최신버전
+test_client3는 첫 완성 초도버전 둘 중 편한걸로 할 것

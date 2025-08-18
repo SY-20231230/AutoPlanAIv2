@@ -1,0 +1,22 @@
+[예시 컨펌된 설계]
+
+- 스택: Django REST API + React 프론트 + Postgres(SQL)
+- 리소스: users, posts
+- 요구사항
+  - users: CRUD, 비밀번호 해시, 이메일 유니크
+  - posts: CRUD, 작성자(users) FK, 페이지네이션
+- 비기능: 인증 JWT, 에러 포맷 표준화
+
+파일 구성 제안(예시)
+- backend: api/views.py, api/serializers.py, api/urls.py, settings 보완 등
+- frontend: pages/index.tsx, pages/posts.tsx, api/client.ts 등
+- sql: schema.sql, seed.sql
+
+
+
+
+
+
+
+
+
