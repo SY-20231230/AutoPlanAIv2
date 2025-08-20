@@ -1,0 +1,88 @@
+{
+  "files": [
+    {
+      "path": "app/main.py",
+      "brief": "FastAPI 애플리케이션의 메인 진입점. 미들웨어, 라우터 설정 및 앱 초기화를 담당합니다."
+    },
+    {
+      "path": "app/api/v1/endpoints/trips.py",
+      "brief": "여행 계획 생성, 대화 진행, 일정 조회 등 핵심 여행 추천 API 엔드포인트를 정의합니다."
+    },
+    {
+      "path": "app/api/v1/endpoints/users.py",
+      "brief": "사용자 회원가입, 로그인, 프로필 관리 등 인증 및 사용자 관련 API 엔드포인트를 정의합니다."
+    },
+    {
+      "path": "app/core/config.py",
+      "brief": "애플리케이션 설정을 관리합니다. 데이터베이스 URL, 외부 API 키 등 환경 변수를 로드합니다."
+    },
+    {
+      "path": "app/db/session.py",
+      "brief": "PostgreSQL 데이터베이스 세션 생성 및 FastAPI의 종속성 주입(Dependency Injection)을 설정합니다."
+    },
+    {
+      "path": "app/models/user.py",
+      "brief": "SQLAlchemy ORM 모델. 사용자 프로필, 여행 선호도, 음식 알레르기 정보에 대한 데이터베이스 테이블을 정의합니다."
+    },
+    {
+      "path": "app/models/trip.py",
+      "brief": "SQLAlchemy ORM 모델. 생성된 여행(Trip), 세부일정(Itinerary), 관심장소(POI), 팝업스토어 정보 테이블을 정의합니다."
+    },
+    {
+      "path": "app/schemas/trip.py",
+      "brief": "Pydantic 스키마. 여행 계획 생성 및 조회 API의 요청/응답 데이터 유효성 검사 및 직렬화를 담당합니다."
+    },
+    {
+      "path": "app/schemas/user.py",
+      "brief": "Pydantic 스키마. 사용자 관련 API의 요청/응답 데이터 유효성 검사를 담당합니다."
+    },
+    {
+      "path": "app/crud/crud_trip.py",
+      "brief": "여행, 일정, POI 데이터에 대한 데이터베이스 CRUD(Create, Read, Update, Delete) 로직을 구현합니다."
+    },
+    {
+      "path": "app/crud/crud_user.py",
+      "brief": "사용자 데이터에 대한 데이터베이스 CRUD 로직을 구현합니다."
+    },
+    {
+      "path": "app/services/trip_planner_service.py",
+      "brief": "사용자 요구사항과 AI 제안을 바탕으로 최종 세부 여행 일정을 생성하는 핵심 비즈니스 로직을 포함합니다."
+    },
+    {
+      "path": "app/services/gemini_service.py",
+      "brief": "Google Gemini API와의 통신을 전담합니다. 대화 생성, 정보 검색, Function Calling 요청 및 결과 처리를 담당합니다."
+    },
+    {
+      "path": "app/services/maps_service.py",
+      "brief": "Google Maps Platform API 연동 로직. 장소 검색, 경로 최적화, 거리 계산 기능을 제공합니다."
+    },
+    {
+      "path": "app/services/web_scraper_service.py",
+      "brief": "웹 스크래핑 로직. 외부 사이트에서 식당 리뷰, 팝업스토어 정보 등을 수집하는 기능을 담당합니다."
+    },
+    {
+      "path": "app/services/cache_service.py",
+      "brief": "Redis 연동 로직. 대화 세션, 자주 사용하는 데이터 캐싱을 통해 시스템 성능을 향상시킵니다."
+    },
+    {
+      "path": "app/ai_tools/search_tools.py",
+      "brief": "Gemini Function Calling을 통해 호출될 함수들을 정의합니다. (예: 맛집 검색, 팝업스토어 조회, 예약 링크 찾기)"
+    },
+    {
+      "path": "app/ai_tools/booking_tools.py",
+      "brief": "Gemini Function Calling을 통해 호출될 예약 관련 함수들을 정의합니다. (예: 숙소/렌터카 예약 연동)"
+    },
+    {
+      "path": "Dockerfile",
+      "brief": "애플리케이션 실행 환경을 정의하는 Docker 이미지 빌드 파일입니다."
+    },
+    {
+      "path": "requirements.txt",
+      "brief": "프로젝트에 필요한 Python 패키지 및 버전 정보를 명시합니다."
+    },
+    {
+      "path": ".env.example",
+      "brief": "필요한 환경 변수 목록을 정의하는 예제 파일입니다. 실제 키는 .env 파일에 저장하여 사용합니다."
+    }
+  ]
+}
