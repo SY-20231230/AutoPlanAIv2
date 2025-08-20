@@ -1,0 +1,240 @@
+@import "./_buttons.css";
+@import "./AIDocument.css"; /* .app-card, header 톤 재사용 */
+
+/* ===== 루트 컨테이너 ===== */
+.similar-root {
+  max-width: 900px;      /* ✅ 공통 규격 */
+  margin: 0 auto;
+  font-family: 'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== 카드 공통 ===== */
+.similar-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.similar-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f1f5f9;  /* SpecSheetCard와 동일 구분선 */
+  margin-bottom: 12px;
+}
+
+.similar-card-head .title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* ===== 공통 상태/배지 ===== */
+.similar-empty {
+  background: #f8fafc;
+  border: 1px dashed #e5e7eb;
+  color: #6b7280;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+
+.badge,
+.badge-blue,
+.badge-red,
+.badge-light {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+
+.badge-blue {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+}
+
+.badge-red {
+  background: #fef2f2;
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+.badge-light {
+  background: #f1f5f9;
+  color: #334155;
+  border-color: #e5e7eb;
+}
+
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ===== 결과 하단 버튼 ===== */
+.similar-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* ===== USP/유사기능 섹션 그리드 (JSX 인라인 배경과 조화) ===== */
+.similar-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* ===== 프로젝트 카드(유사 레퍼런스 아이템) ===== */
+.similar-project {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+.similar-project .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.similar-project .name {
+  font-weight: 700;
+  color: #111827;
+}
+.similar-project .link {
+  font-size: 12px;
+  color: #2563eb;
+  text-decoration: none;
+}
+.similar-project .link:hover {
+  text-decoration: underline;
+}
+.similar-project .score {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* 코드 스니펫 박스 */
+.similar-snippet {
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 6px;
+  overflow: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+/* ===== ToggleRequirementRow (토글 헤더 버튼 보조) ===== */
+.similar-toggle-head {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: #f8fafc;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+}
+.similar-toggle-title {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* 토글 본문 */
+.similar-toggle-body {
+  padding: 12px;
+}
+.similar-toggle-pre {
+  margin: 0;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  white-space: pre-wrap;
+  line-height: 1.55;
+  color: #334155;
+}
+
+/* ===== 버튼 프리셋 (필요시) ===== */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-outline:disabled { opacity: .6; cursor: not-allowed; }
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: #2563eb;
+  border: 0;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-primary:disabled { opacity: .6; cursor: not-allowed; }
+/* ===== Toast (상단 중앙 고정) ===== */
+.similar-toast {
+  position: fixed;
+  top: 16px;
+  left: 50%;                     /* ✅ 가운데 기준 */
+  transform: translateX(-50%);   /* ✅ 가로 중앙 정렬 */
+  z-index: 9999;
+  background: #111827;           /* slate-900 */
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;          /* 클릭 막지 않음 */
+  animation: sp-toast-in .2s ease-out;
+}
+@keyframes sp-toast-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 옵션: 상태 색상 프리셋 (원하면 JSX에서 className 추가) */
+.similar-toast--info    { background: #111827; }  /* 기본 */
+.similar-toast--success { background: #065f46; }  /* emerald-800 */
+.similar-toast--warn    { background: #92400e; }  /* amber-800 */
+.similar-toast--error   { background: #7f1d1d; }  /* red-900 */
+
+/* ===== 반응형 ===== */
+@media (max-width: 760px) {
+  .similar-two-col { grid-template-columns: 1fr; }
+}

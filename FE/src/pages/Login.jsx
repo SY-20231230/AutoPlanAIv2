@@ -1,63 +1,98 @@
-import React, { useState } from 'react';
-import { FaUser, FaLock, FaGoogle, FaEye, FaEyeSlash } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import '../styles/Auth.css';
-
-const API_BASE = 'http://192.168.100.45:8000';
+// src/pages/Login.jsx
+import React, { useState } from "react";
+import { FaUser, FaLock, FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
+import { useNavigate, useLocation } from "react-router-dom";
+import api, { API_BASE } from "../api/axiosInstance";
+import axios from "axios";
+import "../styles/Auth.css";
 
 const Login = ({ onLogin }) => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const location = useLocation();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // 🔑 로그인 핸들러
+  const saveTokens = (data) => {
+    const { access, refresh } = data || {};
+    if (!access) throw new Error("토큰이 응답에 없습니다.");
+    localStorage.setItem("accessToken", access);
+    if (refresh) localStorage.setItem("refreshToken", refresh);
+  };
+
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError('');
+    setError("");
     setLoading(true);
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
 
-    // 기존 토큰 제거
-    localStorage.removeItem('accessToken');
-    localStorage.removeItem('refreshToken');
+    const tryJsonEmail = () => api.post("/login/", { email, password });
+    const tryJsonUsername = () => api.post("/login/", { username: email, password });
+    const tryForm = () => {
+      const form = new URLSearchParams();
+      form.append("username", email);
+      form.append("password", password);
+      return axios.post(`${API_BASE}/login/`, form, {
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      });
+    };
 
     try {
-      const res = await axios.post(`${API_BASE}/api/login/`, { email, password });
-      const { access, refresh } = res.data || {};
-
-      if (!access) {
-        throw new Error('토큰이 응답에 없습니다.');
+      let res;
+      try {
+        res = await tryJsonEmail();
+      } catch {
+        try {
+          res = await tryJsonUsername();
+        } catch {
+          res = await tryForm();
+        }
       }
 
-      // 토큰 저장 + 전역 헤더 세팅
-      localStorage.setItem('accessToken', access);
-      if (refresh) localStorage.setItem('refreshToken', refresh);
-      axios.defaults.headers.common.Authorization = `Bearer ${access}`;
+      // 1) 토큰 저장
+      saveTokens(res.data);
 
-      if (onLogin) onLogin(email);
-      navigate('/'); // 홈 이동
+      // 2) 표시용 이름 결정: /me/ → fallback: 이메일 @ 앞부분
+      let displayName = email.split("@")[0];
+      try {
+        const me = await api.get("/me/");
+        displayName =
+          me?.data?.name ||
+          me?.data?.username ||
+          me?.data?.email?.split("@")[0] ||
+          displayName;
+      } catch (_) {
+        // 프로필 API가 없거나 실패해도 무시하고 fallback 사용
+      }
+
+      // 3) 상위 App에 표시명 전달(=> Header에서 '님' 없이 이름만 노출)
+      onLogin?.(displayName);
+
+      // 4) 이동: ?redirect > from > 기본 /main
+      const params = new URLSearchParams(location.search);
+      const redirect = params.get("redirect");
+      const from = location.state?.from?.pathname;
+      navigate(redirect || from || "/main", { replace: true });
     } catch (err) {
-      // 실패 시 토큰 정리
-      localStorage.removeItem('accessToken');
-      localStorage.removeItem('refreshToken');
-
+      localStorage.removeItem("accessToken");
+      localStorage.removeItem("refreshToken");
       const msg =
         err?.response?.data?.error ??
         err?.response?.data?.detail ??
+        err?.response?.data?.message ??
         err?.message ??
-        '로그인에 실패했습니다. 관리자에게 문의하세요.';
+        "로그인에 실패했습니다.";
       setError(msg);
     } finally {
       setLoading(false);
     }
   };
 
-  // 구글 로그인
   const handleGmailLogin = () => {
-    window.location.href = `${API_BASE}/api/auth/google/`;
+    window.location.href = `${API_BASE}/auth/google/`;
   };
 
   return (
@@ -71,34 +106,27 @@ const Login = ({ onLogin }) => {
             type="email"
             placeholder="이메일"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             autoComplete="username"
             required
           />
         </div>
 
-        <div className="input-line" style={{ position: 'relative' }}>
+        <div className="input-line" style={{ position: "relative" }}>
           <FaLock className="input-icon" />
           <input
-            type={showPassword ? 'text' : 'password'}
+            type={showPassword ? "text" : "password"}
             placeholder="비밀번호"
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             autoComplete="current-password"
             required
           />
           <span
             className="password-eye-icon"
             onClick={() => setShowPassword(!showPassword)}
-            style={{
-              position: 'absolute',
-              right: '14px',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              cursor: 'pointer',
-              color: '#888'
-            }}
-            aria-label={showPassword ? '비밀번호 숨기기' : '비밀번호 보기'}
+            style={{ position: "absolute", right: 14, top: "50%", transform: "translateY(-50%)", cursor: "pointer" }}
+            aria-label={showPassword ? "비밀번호 숨기기" : "비밀번호 보기"}
           >
             {showPassword ? <FaEyeSlash /> : <FaEye />}
           </span>
@@ -107,22 +135,12 @@ const Login = ({ onLogin }) => {
         {error && <div className="auth-error">{error}</div>}
 
         <button className="main-login-btn" type="submit" disabled={loading}>
-          {loading ? '로그인 중...' : '로그인'}
+          {loading ? "로그인 중..." : "로그인"}
         </button>
 
         <button className="gmail-btn" type="button" onClick={handleGmailLogin}>
           <FaGoogle className="gmail-logo" /> Gmail로 로그인
         </button>
-
-        <div className="login-link">
-          계정이 없으신가요?{' '}
-          <span
-            onClick={() => navigate('/signup')}
-            style={{ cursor: 'pointer', color: '#2b50ec', fontWeight: 600 }}
-          >
-            회원가입
-          </span>
-        </div>
       </form>
     </div>
   );

@@ -1,0 +1,103 @@
+/* 공용 버튼 프리셋: 두 카드 공통 사용 */
+.btn-primary,
+.btn-outline,
+.btn-secondary,
+.btn-success {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 6px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  text-align: center;
+
+  /* === 크기/정렬 통일 (컴팩트 버전) === */
+  height: 34px;        /* ⬇️ 40px → 34px */
+  padding: 0 12px;     /* ⬇️ 좌우 패딩 줄임 */
+  min-width: 100px;    /* ⬇️ 최소 폭 줄임 */
+  font-size: 14px;     /* ⬇️ 글자 크기도 줄임 */
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+/* primary */
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+.btn-primary:hover:not(:disabled) { background: #1d4ed8; }
+.btn-primary:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* outline */
+.btn-outline {
+  background: #ffffff;
+  color: #2563eb;
+  border-color: #2563eb;
+}
+.btn-outline:hover:not(:disabled) {
+  background: #2563eb;
+  color: #ffffff;
+}
+.btn-outline:disabled {
+  color: #93c5fd;
+  border-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* secondary */
+.btn-secondary {
+  background: #f8fafc;
+  color: #475569;
+  border-color: #e2e8f0;
+  border-width: 2px;
+  border-style: solid;
+}
+.btn-secondary:hover:not(:disabled) { background: #e2e8f0; }
+
+/* success */
+.btn-success {
+  background: #10b981;
+  color: #ffffff;
+}
+.btn-success:hover:not(:disabled) { background: #059669; }
+.btn-success:disabled { opacity: .6; cursor: not-allowed; }
+
+/* 아이콘 크기/여백 통일 (컴팩트) */
+.btn-primary svg,
+.btn-outline svg,
+.btn-secondary svg,
+.btn-success svg {
+  width: 16px;    /* ⬇️ 18px → 16px */
+  height: 16px;
+  margin-right: 4px; /* ⬇️ 간격 좁힘 */
+}
+
+/* disabled 시 크기 변화 방지 */
+.btn-primary:disabled,
+.btn-outline:disabled,
+.btn-secondary:disabled,
+.btn-success:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* === 공용 버튼 프리셋 (이미 있는 부분은 그대로 두고 아래만 추가) === */
+
+/* 카드 하단 '다음' 버튼 전용 */
+.btn-next {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-next button {
+  /* 기본 버튼 스타일 활용 (예: .btn-primary) */
+  min-width: 120px;
+}
