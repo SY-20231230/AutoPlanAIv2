@@ -1,0 +1,120 @@
+{
+  "files": [
+    {
+      "path": "package.json",
+      "brief": "프로젝트 의존성, 스크립트, 메타데이터 정의"
+    },
+    {
+      "path": "package-lock.json",
+      "brief": "정확한 의존성 버전 잠금"
+    },
+    {
+      "path": "vite.config.ts",
+      "brief": "Vite 빌드 및 개발 서버 설정"
+    },
+    {
+      "path": "tsconfig.json",
+      "brief": "TypeScript 컴파일러 설정"
+    },
+    {
+      "path": ".env",
+      "brief": "환경 변수 정의 (개발용)"
+    },
+    {
+      "path": ".env.production",
+      "brief": "환경 변수 정의 (배포용)"
+    },
+    {
+      "path": ".gitignore",
+      "brief": "Git 버전 관리에서 제외할 파일 및 디렉토리 지정"
+    },
+    {
+      "path": ".eslintrc.cjs",
+      "brief": "ESLint 코드 품질 및 스타일 규칙 정의"
+    },
+    {
+      "path": ".prettierrc.cjs",
+      "brief": "Prettier 코드 포맷팅 규칙 정의"
+    },
+    {
+      "path": "public/index.html",
+      "brief": "애플리케이션 진입점 HTML 파일"
+    },
+    {
+      "path": "public/favicon.ico",
+      "brief": "웹사이트 파비콘"
+    },
+    {
+      "path": "src/main.tsx",
+      "brief": "React 애플리케이션 초기화 및 렌더링 진입점"
+    },
+    {
+      "path": "src/App.tsx",
+      "brief": "메인 애플리케이션 컴포넌트 및 라우팅 정의"
+    },
+    {
+      "path": "src/index.css",
+      "brief": "전역 CSS 스타일 정의"
+    },
+    {
+      "path": "src/components/common/Button.tsx",
+      "brief": "재사용 가능한 공통 UI 컴포넌트 (예: 버튼)"
+    },
+    {
+      "path": "src/components/layout/Header.tsx",
+      "brief": "레이아웃 관련 컴포넌트 (예: 헤더)"
+    },
+    {
+      "path": "src/pages/HomePage.tsx",
+      "brief": "각 페이지를 나타내는 컴포넌트 (예: 메인 페이지)"
+    },
+    {
+      "path": "src/pages/NotFoundPage.tsx",
+      "brief": "404 에러 페이지 컴포넌트"
+    },
+    {
+      "path": "src/hooks/useAuth.ts",
+      "brief": "재사용 가능한 커스텀 React 훅 (예: 인증 관련 훅)"
+    },
+    {
+      "path": "src/utils/formatters.ts",
+      "brief": "범용 유틸리티 함수 (예: 데이터 포맷터)"
+    },
+    {
+      "path": "src/api/auth.ts",
+      "brief": "백엔드 API 호출 로직 (예: 인증 API)"
+    },
+    {
+      "path": "src/api/client.ts",
+      "brief": "API 클라이언트 설정 및 공통 로직"
+    },
+    {
+      "path": "src/store/authStore.ts",
+      "brief": "상태 관리 스토어 (예: 인증 상태)"
+    },
+    {
+      "path": "src/types/index.ts",
+      "brief": "전역 TypeScript 타입 정의"
+    },
+    {
+      "path": "src/router/index.tsx",
+      "brief": "React Router 설정 및 라우트 정의"
+    },
+    {
+      "path": "src/assets/images/logo.svg",
+      "brief": "정적 이미지, 아이콘 등 에셋"
+    },
+    {
+      "path": "cypress.config.ts",
+      "brief": "Cypress 테스트 프레임워크 설정"
+    },
+    {
+      "path": "cypress/e2e/auth.cy.ts",
+      "brief": "Cypress 엔드-투-엔드 테스트 스크립트 (예: 인증 흐름 테스트)"
+    },
+    {
+      "path": "cypress/support/commands.ts",
+      "brief": "Cypress 커스텀 명령어 정의"
+    }
+  ]
+}

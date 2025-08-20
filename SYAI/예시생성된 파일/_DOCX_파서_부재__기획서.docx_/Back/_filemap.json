@@ -1,0 +1,100 @@
+{
+  "files": [
+    {
+      "path": "pom.xml",
+      "brief": "Maven 빌드 설정 파일. 프로젝트 의존성, 플러그인, 빌드 라이프사이클 정의."
+    },
+    {
+      "path": "src/main/java/com/example/project/Application.java",
+      "brief": "Spring Boot 애플리케이션의 메인 진입점."
+    },
+    {
+      "path": "src/main/java/com/example/project/controller/HealthCheckController.java",
+      "brief": "애플리케이션 상태 확인을 위한 헬스 체크 API 엔드포인트."
+    },
+    {
+      "path": "src/main/java/com/example/project/controller/ExampleController.java",
+      "brief": "특정 도메인(예: 사용자, 상품)에 대한 REST API 엔드포인트 정의. HTTP 요청 처리 및 서비스 계층 호출."
+    },
+    {
+      "path": "src/main/java/com/example/project/service/ExampleService.java",
+      "brief": "비즈니스 로직을 포함하는 서비스 계층. 컨트롤러와 리포지토리 간의 중재 역할."
+    },
+    {
+      "path": "src/main/java/com/example/project/repository/ExampleRepository.java",
+      "brief": "데이터베이스 접근을 위한 리포지토리 인터페이스 (Spring Data JPA 기반). 데이터 CRUD 연산 정의."
+    },
+    {
+      "path": "src/main/java/com/example/project/model/ExampleEntity.java",
+      "brief": "데이터베이스 테이블과 매핑되는 JPA 엔티티 클래스. 도메인 모델 정의."
+    },
+    {
+      "path": "src/main/java/com/example/project/dto/ExampleRequestDto.java",
+      "brief": "API 요청 시 사용되는 데이터 전송 객체 (DTO). 요청 데이터 유효성 검사 포함."
+    },
+    {
+      "path": "src/main/java/com/example/project/dto/ExampleResponseDto.java",
+      "brief": "API 응답 시 사용되는 데이터 전송 객체 (DTO). 응답 데이터 형식 정의."
+    },
+    {
+      "path": "src/main/java/com/example/project/config/AppConfig.java",
+      "brief": "애플리케이션 전반에 걸친 설정 (예: Bean 정의, CORS 설정, WebMvc 설정)."
+    },
+    {
+      "path": "src/main/java/com/example/project/config/SecurityConfig.java",
+      "brief": "Spring Security를 이용한 인증 및 권한 부여 설정. API 보안 정책 정의."
+    },
+    {
+      "path": "src/main/java/com/example/project/exception/GlobalExceptionHandler.java",
+      "brief": "애플리케이션 전역 예외 처리를 위한 핸들러. 일관된 에러 응답 형식 제공."
+    },
+    {
+      "path": "src/main/resources/application.yml",
+      "brief": "기본 애플리케이션 설정 파일. 서버 포트, 로깅, 공통 속성 정의."
+    },
+    {
+      "path": "src/main/resources/application-dev.yml",
+      "brief": "개발 환경별 설정 오버라이드. 개발용 데이터베이스 연결 정보 등."
+    },
+    {
+      "path": "src/main/resources/application-prod.yml",
+      "brief": "운영 환경별 설정 오버라이드. 운영용 데이터베이스 연결 정보, 보안 설정 등."
+    },
+    {
+      "path": "src/main/resources/db/migration/V1__initial_schema.sql",
+      "brief": "Flyway를 위한 초기 데이터베이스 스키마 정의 스크립트. 테이블 생성, 인덱스 정의 등."
+    },
+    {
+      "path": "src/main/resources/db/migration/V2__add_new_feature_table.sql",
+      "brief": "Flyway를 위한 추가 데이터베이스 변경 스크립트. 새로운 테이블 또는 컬럼 추가."
+    },
+    {
+      "path": "src/test/java/com/example/project/controller/ExampleControllerTest.java",
+      "brief": "컨트롤러 계층의 단위 및 통합 테스트 코드. API 엔드포인트 동작 검증."
+    },
+    {
+      "path": "src/test/java/com/example/project/service/ExampleServiceTest.java",
+      "brief": "서비스 계층의 단위 테스트 코드. 비즈니스 로직의 정확성 검증."
+    },
+    {
+      "path": "src/test/java/com/example/project/repository/ExampleRepositoryTest.java",
+      "brief": "리포지토리 계층의 통합 테스트 코드. 데이터베이스 연동 및 쿼리 동작 검증."
+    },
+    {
+      "path": "Dockerfile",
+      "brief": "애플리케이션을 Docker 이미지로 빌드하기 위한 정의 파일. 실행 환경 및 종속성 명시."
+    },
+    {
+      "path": ".dockerignore",
+      "brief": "Docker 이미지 빌드 시 컨텍스트에서 제외할 파일 및 디렉토리 목록."
+    },
+    {
+      "path": "README.md",
+      "brief": "프로젝트 개요, 빌드 및 실행 방법, API 문서 링크, 주요 기능 설명 등."
+    },
+    {
+      "path": ".gitignore",
+      "brief": "Git 버전 관리에서 제외할 파일 및 디렉토리 목록."
+    }
+  ]
+}

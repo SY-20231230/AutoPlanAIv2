@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "path": "db/migration/V1__initial_schema.sql",
+      "brief": "초기 데이터베이스 스키마를 정의합니다. 모든 테이블, 인덱스, 제약 조건이 포함됩니다."
+    },
+    {
+      "path": "db/migration/V2__create_users_table.sql",
+      "brief": "사용자 관리를 위한 'users' 테이블을 생성하고 관련 인덱스를 추가합니다."
+    },
+    {
+      "path": "db/migration/V3__add_products_table.sql",
+      "brief": "제품 정보를 저장하기 위한 'products' 테이블을 생성합니다."
+    },
+    {
+      "path": "db/migration/R__create_views_and_functions.sql",
+      "brief": "반복적으로 적용될 수 있는 뷰, 저장 프로시저, 함수 정의를 포함합니다."
+    },
+    {
+      "path": "db/seed/development_seed_data.sql",
+      "brief": "개발 및 테스트 환경을 위한 초기 샘플 데이터를 삽입하는 스크립트입니다."
+    },
+    {
+      "path": "db/dev/ad_hoc_queries.sql",
+      "brief": "개발자들이 임시로 사용하거나 테스트 목적으로 작성하는 SQL 쿼리들을 모아둡니다."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+```python
+# This is a sample Python script.
+
+def calculate_sum(a, b):
+    """
+    Calculates the sum of two numbers.
+    """
+    return a + b
+
+def main():
+    """
+    Main function to demonstrate the sum calculation.
+    """
+    num1 = 10
+    num2 = 20
+    result = calculate_sum(num1, num2)
+    print(f"The sum of {num1} and {num2} is: {result}")
+
+if __name__ == "__main__":
+    main()
+```

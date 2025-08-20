@@ -1,0 +1,48 @@
+# Build artifacts
+target/
+build/
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.class
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+**/build/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Configuration files (local overrides, sensitive info)
+application-local.properties
+application-dev.properties
+application-local.yml
+application-dev.yml
+
+# Database files (e.g., H2 embedded DB)
+*.mv.db
+*.trace.db
