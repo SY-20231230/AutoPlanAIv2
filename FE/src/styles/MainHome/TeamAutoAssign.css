@@ -1,16 +1,188 @@
-/* src/styles/MainHome/TeamAutoAssign.css */
-.team-auto {
+@import "./_buttons.css";
+@import "./AIDocument.css";
+
+/* 컨테이너 */
+.team-root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  font-family: 'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+}
+
+/* ===== 상단: 아이콘 + 제목 + 회색선 ===== */
+.team-header-top {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+  margin-bottom: 12px;
+}
+.team-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.team-title-row h3 {
+  margin: 0;
+  font-size: 1.06rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+.team-title-icon {
+  width: 20px;
+  height: 20px;
+  color: #2563eb;
+}
+
+/* ===== 툴바: 프로젝트 ID + 버튼 ===== */
+.team-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.team-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #475569;
+  font-size: 14px;
+}
+.team-project .label { color: #6b7280; }
+.team-project .value { color: #111827; font-weight: 700; }
+.team-actions { display: inline-flex; gap: 8px; }
+
+/* 로딩 */
+.team-loading { color: #6b7280; margin-bottom: 8px; }
+
+/* 카드 공통 */
+.team-card {
   background: #fff;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 12px;
+  margin-bottom: 16px;
 }
-.team-auto h3 {
-  margin: 1rem 0 0.5rem;
-  font-size: 1.1rem;
+.team-card-title {
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #111827;
 }
-.team-auto p {
-  font-size: 0.95rem;
-  color: #555;
+
+/* 신규 팀원 폼 */
+.team-newmember-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr auto;
+  gap: 8px;
+  align-items: center; /* ✅ 버튼/입력폼 수직 정렬 */
+}
+.team-add-btn {
+  height: 34px;          /* ✅ 버튼 높이 입력폼과 맞춤 */
+  padding: 0 12px;
+  white-space: nowrap;
+}
+
+/* 테이블 */
+.team-table-header,
+.team-table-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+}
+.team-table-header {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.team-table-row { border-bottom: 1px solid #f1f5f9; }
+
+.th { font-size: 13px; font-weight: 800; color: #111827; }
+.td { font-size: 13px; color: #374151; }
+.strong { font-weight: 700; color:#111827; }
+
+.flex2 { flex: 2; }
+.flex3 { flex: 3; }
+.w56  { width: 56px; }
+.w112 { width: 112px; }
+.w168 { width: 168px; }
+.right { text-align: right; }
+
+.team-empty { padding: 12px; color: #9ca3af; }
+
+/* 입력/선택 공통 */
+.team-input,
+.team-select {
+  width: 100%;
+  height: 34px;            /* ✅ 버튼과 높이 통일 (36px → 34px) */
+  padding: 0 10px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  font-size: .9rem;
+  box-sizing: border-box;  /* ✅ 크기 흔들림 방지 */
+}
+
+/* 아이콘 버튼 */
+.icon-group { display: inline-flex; gap: 6px; }
+.icon-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; /* ✅ 폼/버튼 크기와 맞춤 */
+  background: #fff; border: 1px solid #e5e7eb; color: #374151;
+  border-radius: 8px; cursor: pointer;
+}
+.icon-btn-danger { border-color: #fecaca; color: #b91c1c; }
+
+/* 하단 */
+.team-footer { display: flex; justify-content: flex-end; margin-top: 16px; }
+.next-btn { gap: 8px; }
+
+/* 빈 테이블 안내 - 자동 분배 버튼 */
+.team-empty .auto-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2563eb;
+  border: 1.5px solid #2563eb;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.team-empty .auto-btn:hover {
+  background: #2563eb;
+  color: #fff;
+}
+.team-empty .auto-btn:disabled {
+  color: #93c5fd;
+  border-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* 모달 (Team 페이지 기본) */
+.modal-backdrop {
+  position: fixed; inset: 0; background: rgba(0,0,0,.3);
+  display: flex; align-items: center; justify-content: center; z-index: 50;
+}
+.modal {
+  width: 640px; max-width: 96vw;
+  background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px;
+}
+.modal-head {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;
+}
+.modal-body { max-height: 60vh; overflow: auto; }
+.team-pre { margin: 0; font-size: 12px; }
+
+/* 반응형 */
+@media (max-width: 760px) {
+  .team-toolbar { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .team-newmember-grid { grid-template-columns: 1fr; }
+  .w112, .w56, .w168 { width: auto; }
+  .right { text-align: left; }
 }

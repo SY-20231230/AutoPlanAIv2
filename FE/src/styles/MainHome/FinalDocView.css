@@ -1,0 +1,182 @@
+/* ===== 카드 컨테이너 ===== */
+.finaldoc-card.app-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 18px 20px;
+}
+
+/* ===== Draft Select ===== */
+.finaldoc-draftselect {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+.finaldoc-draftselect label {
+  color: #334155;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* 공통 셀렉트 */
+.input-select {
+  min-width: 280px;
+  height: 38px;
+  padding: 0 36px 0 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 0.95rem;
+  color: #0f172a;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.75 9l5.25 5.25L17.25 9' stroke='%2362748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px;
+  transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease;
+}
+.input-select:hover { border-color: #cbd5e1; }
+.input-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.12);
+}
+.input-select:disabled {
+  color: #94a3b8;
+  background-color: #f1f5f9;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.75 9l5.25 5.25L17.25 9' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* ===== 헤더 ===== */
+.finaldoc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.finaldoc-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.finaldoc-title h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0f172a;
+  font-weight: 800;
+}
+.finaldoc-title-icon { color: #2563eb; }
+
+/* 헤더-본문 구분선 */
+.finaldoc-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 12px 0 14px;
+}
+
+/* ===== 프로젝트/드래프트 정보 칩 ===== */
+.finaldoc-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #dbeafe;
+  background: #eff6ff;
+  color: #1e3a8a;
+  font-weight: 700;
+  font-size: .85rem;
+}
+.chip b { font-weight: 900; }
+.chip.alt {
+  border-color: #e5e7eb;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* ===== 버튼 영역 ===== */
+.finaldoc-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 12px 0 6px;
+}
+.fd-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .75rem 1rem;
+  border-radius: .8rem;
+  font-weight: 800;
+  font-size: .95rem;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+.fd-btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+.fd-btn-primary {
+  background: #2563eb;
+  color: #fff;
+  border-color: #1d4ed8;
+}
+.fd-btn-primary:hover:not(:disabled) {
+  background: #1e40af;
+}
+.fd-btn-secondary {
+  background: #fff;
+  color: #111827;
+}
+.fd-btn-secondary:hover:not(:disabled) {
+  background: #f9fafb;
+}
+
+/* ===== 로딩 spin ===== */
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ===== 메시지/프리뷰 ===== */
+.finaldoc-alert {
+  margin-top: 6px;
+  padding: 10px 12px;
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #991b1b;
+  border-radius: 10px;
+  font-weight: 700;
+}
+.finaldoc-preview { margin-top: 10px; }
+.finaldoc-empty {
+  padding: 14px 12px;
+  border: 1px dashed #e5e7eb;
+  border-radius: 10px;
+  color: #64748b;
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 560px) {
+  .finaldoc-card.app-card { padding: 14px; }
+  .finaldoc-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .finaldoc-badges { width: 100%; }
+  .finaldoc-draftselect { flex-direction: column; align-items: stretch; gap: 8px; }
+  .input-select { width: 100%; min-width: 0; }
+  .finaldoc-actions { grid-template-columns: 1fr; }
+}

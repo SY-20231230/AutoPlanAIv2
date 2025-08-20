@@ -7,6 +7,7 @@ const Header = ({ isLoggedIn, userName, onLogout }) => {
   const navigate = useNavigate();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const [fallbackName, setFallbackName] = useState('');
 
   // 외부 클릭 시 드롭다운 닫기
   useEffect(() => {
@@ -19,23 +20,38 @@ const Header = ({ isLoggedIn, userName, onLogout }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [dropdownOpen]);
 
-  // 사용자 이름 표시 (없으면 더미, 있으면 실제 userName)
-  const displayName = userName || '말차';
+  // 스토리지 변화(다른 탭 로그인/로그아웃) 반영
+  useEffect(() => {
+    const syncFromStorage = () => {
+      const name =
+        userName ||
+        localStorage.getItem('username') ||
+        localStorage.getItem('userName') ||
+        localStorage.getItem('name') ||
+        localStorage.getItem('email') ||
+        '';
+      setFallbackName(name);
+    };
+    syncFromStorage();
+    window.addEventListener('storage', syncFromStorage);
+    return () => window.removeEventListener('storage', syncFromStorage);
+  }, [userName]);
+
+  const rawName = (userName || fallbackName || '').trim();
+  // 이메일이면 @ 앞부분만, 아니면 그대로
+  const displayName = rawName.includes('@') ? rawName.split('@')[0] : (rawName || '말차');
 
   return (
     <header className="header">
       <div className="header-left">
         <span className="logo" onClick={() => navigate('/')}>Auto Plan AI</span>
-        <nav className="nav-links">
-          <a href="#features">기능</a>
-          <a href="#workflow">작동 방식</a>
-          <a href="#pricing">요금제</a>
-        </nav>
+        {/* 네비게이션 메뉴 제거 */}
       </div>
+
       <div className="header-right">
         {isLoggedIn ? (
           <div className="user-area" ref={dropdownRef}>
-            <span className="username">{displayName}님</span>
+            <span className="username">{displayName}</span>
             <FaUserCircle
               className="user-icon"
               onClick={() => setDropdownOpen(open => !open)}
@@ -43,20 +59,12 @@ const Header = ({ isLoggedIn, userName, onLogout }) => {
             />
             {dropdownOpen && (
               <div className="dropdown-menu">
+            
                 <div
                   className="dropdown-item"
                   onClick={() => {
                     setDropdownOpen(false);
-                    navigate('/mypage');
-                  }}
-                >
-                  마이페이지
-                </div>
-                <div
-                  className="dropdown-item"
-                  onClick={() => {
-                    setDropdownOpen(false);
-                    if (onLogout) onLogout(); // 상위에서 토큰 정리 및 상태 변경
+                    onLogout?.();
                     navigate('/');
                   }}
                 >

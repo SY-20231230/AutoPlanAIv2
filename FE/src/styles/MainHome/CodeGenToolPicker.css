@@ -1,0 +1,10 @@
+@import "./_buttons.css";
+@import "./AIDocument.css"; /* 공통 카드 스타일 재사용 (app-card 등) */
+
+.cgtp-sub { color:#666; margin-bottom: 12px; }
+.cgtp-grid { display:grid; grid-template-columns:1fr; gap:8px; }
+@media (min-width: 640px) { .cgtp-grid { grid-template-columns:repeat(2, minmax(0,1fr)); } }
+.cgtp-item {
+  padding:12px; border:1px solid #e5e7eb; border-radius:8px; background:#fff; text-align:left; cursor:pointer;
+}
+.cgtp-item.active { border-color:#2563eb; box-shadow:0 0 0 3px rgba(37,99,235,.15); }

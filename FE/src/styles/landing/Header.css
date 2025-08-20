@@ -17,6 +17,13 @@
   gap: 2.5rem;
 }
 
+.logo-img {
+  height: 50px;   /* 필요에 따라 크기 조정 */
+  width: auto;
+  margin-left: 10px; /* 텍스트와 살짝 간격 */
+  cursor: pointer;
+}
+
 .logo {
   font-size: 2rem;
   font-weight: 700;

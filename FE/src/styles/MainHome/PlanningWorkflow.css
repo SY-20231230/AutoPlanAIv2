@@ -1,0 +1,202 @@
+@import "./_buttons.css";
+@import "./AIDocument.css"; /* .app-card, 버튼 톤 공통 사용 */
+
+/* 전체 폰트 */
+.workflow-container,
+.workflow-container * {
+  font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+}
+
+/* 카드 컨테이너 */
+.workflow-container {
+  max-width: 980px;          /* 미리보기 카드 포함 */
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* 헤더 */
+.workflow-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f1f5f9;
+}
+.workflow-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  flex: 1;
+}
+.project-id {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* 단계 표시 */
+.steps-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+.step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all .2s ease;
+}
+.step.active {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+  transform: scale(1.04);
+}
+.arrow { color: #cbd5e1; font-weight: 700; font-size: 1.2rem; }
+
+/* 폼 */
+.form-container { display: flex; flex-direction: column; gap: 20px; }
+
+/* 탭 토글 */
+.form-toggle {
+  display: flex;
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 4px;
+}
+.form-toggle button {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all .2s ease;
+}
+.form-toggle button.active {
+  background: #fff;
+  color: #1e293b;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+
+/* 입력 필드 */
+.form-fields { display: flex; flex-direction: column; gap: 16px; }
+.form-fields input,
+.form-fields textarea {
+  padding: 12px 14px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: .95rem;
+  transition: border-color .15s ease, box-shadow .15s ease;
+  background: #fff;
+}
+.form-fields input:focus,
+.form-fields textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.12);
+}
+.form-fields textarea { resize: none; }
+
+/* 아이디어 입력 아래 ‘미리보기 카드’ */
+.md-card {
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+.md-card_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e5e7eb;
+  font-weight: 700;
+  color: #0f172a;
+}
+.md-card_header .muted { color:#6b7280; font-weight: 600; }
+.md-card_body {
+  padding: 12px;
+  max-height: 420px;
+  overflow: auto;
+}
+.md-card_body pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: .92rem;
+  line-height: 1.5;
+}
+.md-empty {
+  color:#9ca3af;
+  padding: 18px 12px;
+}
+
+/* 파일 업로드 줄 */
+.file-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.file-select { display: inline-flex; align-items: center; gap: 6px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; clip-path: inset(50%); border: 0; padding: 0; margin: -1px; }
+.file-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 8px 12px;
+  background: #fff;
+  color: #0f172a;
+}
+.file-chip-remove { padding: 6px 10px; }
+
+/* 버튼 그룹 */
+.action-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+.action-buttons.right { justify-content: flex-end; }
+.mt-8 { margin-top: 8px; }
+.mt-12 { margin-top: 12px; }
+.ml-6 { margin-left: 6px; }
+
+/* 이후 단계 */
+.next-steps {
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.final-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* 반응형 */
+@media (max-width: 640px) {
+  .workflow-container { padding: 16px; }
+  .steps-container { flex-wrap: wrap; gap: 8px; }
+  .step { padding: 6px 12px; font-size: .8rem; }
+  .action-buttons,
+  .final-actions { flex-direction: column; }
+  .form-toggle { flex-direction: column; }
+}
