@@ -1,8 +1,0 @@
-@import "./_buttons.css";
-@import "./AIDocument.css"; /* app-card 공통 스타일 재사용 */
-
-.cgo-sub { color:#666; margin-bottom: 12px; }
-.cgo-list { display:grid; gap:8px; }
-.cgo-item { border:1px solid #e5e7eb; border-radius:8px; padding:10px 12px; background:#fff; display:flex; justify-content:space-between; }
-.cgo-name { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
-.cgo-meta { color:#666; }
