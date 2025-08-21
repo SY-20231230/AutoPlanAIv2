@@ -47,7 +47,7 @@
 ## 🧭 Architecture & Flow
 
 (아키텍처 이미지 넣을 곳)  
-(플로우차트 이미지 넣을 곳)  
+<img src="./images/flow1.png" alt="Flow Diagram" width="300"/> 
 (PPT 캡처 이미지 넣을 곳)
 
 **E2E pipeline:** Idea/Plan → Spec v1 & v2 → Similar Projects (Top-3, TF-IDF + Gemini API) → Team Roles → Gantt → **R&D Plan Draft** → Tool Recommendations → Code (SQL/FE/BE)
