@@ -1,7 +1,7 @@
 # 🚀 AutoPlanAI
 
 **User-needs-driven AI platform for end-to-end planning → specs → benchmarking → team & Gantt → R&D plan → tool recommendations → code generation.**  
-🔗[Demonstration video](url)
+https://github.com/SY-20231230/AutoPlanAIv2/blob/main/url
 ---
 
 ## 👥 Team Introduction
