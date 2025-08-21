@@ -1,7 +1,7 @@
 # 🚀 AutoPlanAI
 
 **User-needs-driven AI platform for end-to-end planning → specs → benchmarking → team & Gantt → R&D plan → tool recommendations → code generation.**  
-🔗[Demonstration video](url)
+https://github.com/SY-20231230/AutoPlanAIv2
 ---
 
 ## 👥 Team Introduction
@@ -47,17 +47,27 @@
 
 <img src="./images/flow3.png" alt="Flow Diagram" width="600"/> 
 
-<img src="./images/flow1.png" alt="Flow Diagram" width="300"/> 
+<img src="./images/flow4.png" alt="Flow Diagram" width="600"/> 
 
 <img src="./images/flow2.png" alt="Flow Diagram" width="600"/> 
 
 **E2E pipeline:** Idea/Plan → Spec v1 & v2 → Similar Projects (Top-3, TF-IDF + Gemini API) → Team Roles → Gantt → **R&D Plan Draft** → Tool Recommendations → Code (SQL/FE/BE)
 
+##🛠️ Tech<br>
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=React&logoColor=white">
+<img src="https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=django&logoColor=white">
+<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+<img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
+
+##🤖 **Generative AI**<br>
+
+AI: Gemini 2.5 Flash
+<img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=flat-square&logo=google-gemini&logoColor=white">
 ---
 
 ## 🧪 Usage (Web UI Flow — detailed)
 
-https://youtu.be/v2r2Xmw58dU
+[🔗Demonstration video](url)
 
 1) **[New Project]**  
    Create a project from the home screen (name/description).
