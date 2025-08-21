@@ -57,7 +57,7 @@
 
 ## 🧪 Usage (Web UI Flow — detailed)
 
-https://youtu.be/v2r2Xmw58dU
+[🔗Demonstration video](url)
 
 1) **[New Project]**  
    Create a project from the home screen (name/description).
