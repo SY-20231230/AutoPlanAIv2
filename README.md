@@ -53,7 +53,7 @@
 (플로우차트 이미지 넣을 곳)  
 (PPT 캡처 이미지 넣을 곳)
 
-**E2E pipeline:** Idea/Plan → Spec v1 & v2 → Similar Projects (Top-3, TF-IDF + Gemini API) → Team Roles → Gantt → **R&D Plan Draft** → Tool Recommendations → Code (SQL/FE/BE)
+**E2E pipeline:** Idea/Plan → Spec v1 & v2 → Similar Projects (Top-3, TF-IDF + Gemini API) → Team Roles → Gantt → R&D Plan Draft → Tool Recommendations → Code (SQL/FE/BE)
 
 ## 🧪 Usage (Web UI Flow — detailed)
 
