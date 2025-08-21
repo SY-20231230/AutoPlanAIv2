@@ -46,11 +46,11 @@ https://youtu.be/v2r2Xmw58dU
 
 ## 🧭 Architecture & Flow
 
-<img src="./images/flow3.png" alt="Flow Diagram" width="300"/> 
+<img src="./images/flow3.png" alt="Flow Diagram" width="600"/> 
 
 <img src="./images/flow1.png" alt="Flow Diagram" width="300"/> 
 
-<img src="./images/flow2.png" alt="Flow Diagram" width="300"/> 
+<img src="./images/flow2.png" alt="Flow Diagram" width="600"/> 
 
 **E2E pipeline:** Idea/Plan → Spec v1 & v2 → Similar Projects (Top-3, TF-IDF + Gemini API) → Team Roles → Gantt → **R&D Plan Draft** → Tool Recommendations → Code (SQL/FE/BE)
 
