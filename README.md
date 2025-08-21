@@ -47,7 +47,7 @@ https://github.com/SY-20231230/AutoPlanAIv2
 
 <img src="./images/flow3.png" alt="Flow Diagram" width="600"/> 
 
-<img src="./images/flow4.png" alt="Flow Diagram" width="600"/> 
+<img src="./images/flow1.png" alt="Flow Diagram" width="600"/> 
 
 <img src="./images/flow2.png" alt="Flow Diagram" width="600"/> 
 
