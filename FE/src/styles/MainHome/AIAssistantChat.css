@@ -1,0 +1,114 @@
+/* 카드 전체 */
+.ai-chat-container {
+  display: flex;
+  flex-direction: column;
+  /* 기존 height: 100% → 고정 높이로 축소 */
+  height: 1030px; 
+  width: 500px;         /* ← 세로 줄이기 (원하면 360~480px 사이로 조절) */
+  max-width: 100%;        /* 오른쪽 레일 폭 내에서 꽉 차도록 */
+  background: #fff;
+  border-radius: 8px;
+  font-family: 'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.03);
+  border: 1px solid #e5e7eb;
+}
+
+
+/* 상단 헤더: 외곽선은 컨테이너에 맡기고, 내부 구분선을 inset shadow로 */
+.ai-chat-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 1rem 0.75rem 1rem;
+  color: #2563eb;
+
+  background: #fff;                  /* 컨테이너와 동일 배경 → 위쪽 테두리 톤 통일 */
+  border-bottom: 0;                  /* 헤더의 보더 제거 */
+  box-shadow: inset 0 -1px 0 #e5e7eb;/* 헤더-본문 사이 얇은 구분선 */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* 메시지 영역 */
+.ai-chat-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background: #fafbfc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* 말풍선 행 */
+.ai-chat-message {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.4rem;
+  max-width: 90%;
+}
+.ai-chat-message.left { flex-direction: row; }
+.ai-chat-message.right {
+  flex-direction: row-reverse;
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+/* 아바타 */
+.ai-chat-avatar {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2px;
+}
+
+/* 말풍선 */
+.ai-chat-bubble {
+  background: #f1f5f9;
+  color: #222;
+  padding: 0.65rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.97rem;
+  max-width: 22rem;
+  word-break: break-word;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.03);
+}
+.ai-chat-message.right .ai-chat-bubble {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* 하단 입력 영역 */
+.ai-chat-input-area {
+  display: flex;
+  padding: 0.6rem 1rem;
+  background: #fff;
+  gap: 0.5rem;
+
+  border-top: 1px solid #e5e7eb;     /* 하단 구분선(컨테이너 외곽선과 동일 톤) */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.ai-chat-input {
+  flex: 1;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background: #f3f4f6;
+  padding: 0.7rem 1rem;
+  border-radius: 1.5rem;
+}
+
+.ai-chat-send-btn {
+  background: #2563eb;
+  border: none;
+  border-radius: 2rem;
+  color: #fff;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.13s;
+  cursor: pointer;
+}
+.ai-chat-send-btn:hover { background: #1741b6; }

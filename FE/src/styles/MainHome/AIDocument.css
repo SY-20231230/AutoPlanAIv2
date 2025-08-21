@@ -1,0 +1,21 @@
+@import "./_buttons.css";
+
+/* 공통 카드 톤 */
+.app-card,
+.app-card * { font-family: 'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif; }
+.app-card {
+  background: #fff; border: 1px solid #e5e7eb; border-radius: 12px;
+  padding: 24px; max-width: 800px; margin: 0 auto;
+}
+.app-card-header { display:flex; align-items:center; gap:8px; margin-bottom:16px; padding-bottom:12px; border-bottom:2px solid #f1f5f9; }
+.app-card-header-icon { color:#2563eb; }
+.app-card-title { margin:0; font-size:1.05rem; font-weight:600; color:#1e293b; }
+
+.aidoc-desc { color:#475569; margin-bottom:12px; }
+.aidoc-list { display:grid; gap:10px; }
+.aidoc-item {
+  display:flex; justify-content:space-between; align-items:center;
+  border:1px solid #e5e7eb; border-radius:8px; padding:10px 12px; background:#fff;
+}
+.aidoc-name { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: .95rem; }
+.aidoc-actions { display:flex; gap:8px; }

@@ -1,0 +1,118 @@
+@import "./_buttons.css";
+@import "./AIDocument.css"; /* .app-card, .app-card-header 톤 재사용 */
+
+/* ===== 컨테이너(카드 규격) ===== */
+.ganttedit-container {
+  max-width: 800px;           /* ✅ 다른 카드들과 동일 폭 */
+  margin: 0 auto;
+  padding: 16px 20px;
+}
+
+/* ===== 상단 컨트롤 바 ===== */
+.ganttedit-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.ganttedit-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+.ganttedit-date {
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+.ganttedit-actions {
+  display: inline-flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.ganttedit-actions .btn-primary,
+.ganttedit-actions .btn-success {
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ===== 태스크 리스트 / 행 ===== */
+.ganttedit-tasklist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.ganttedit-taskrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.ganttedit-taskmeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #111827;
+  font-size: 0.95rem;
+}
+
+.ganttedit-part {
+  font-weight: 800;
+  color: #111827;
+}
+
+.ganttedit-name {
+  color: #334155;
+}
+
+.ganttedit-editors {
+  display: inline-flex;
+  gap: 8px;
+}
+
+/* 숫자 인풋 공통 */
+.ganttedit-inputnum {
+  width: 120px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 0.95rem;
+}
+
+.ganttedit-inputnum::-webkit-outer-spin-button,
+.ganttedit-inputnum::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.ganttedit-inputnum[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 760px) {
+  .ganttedit-container { padding: 14px; }
+  .ganttedit-controls { gap: 10px; }
+  .ganttedit-inputnum { width: 104px; }
+  .ganttedit-taskrow { flex-direction: column; align-items: flex-start; }
+  .ganttedit-editors { width: 100%; }
+}

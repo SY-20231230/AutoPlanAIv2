@@ -1,0 +1,199 @@
+@import "./_buttons.css";
+
+/* ================================
+   공통 폰트
+================================ */
+.similar-root,
+.similar-root * {
+  font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+}
+
+/* ================================
+   컨테이너 (SpecSheetCard 톤과 일치)
+================================ */
+.similar-root {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  box-shadow: none;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ================================
+   (선택) 상단 헤더 – 현재는 사용 안 해도 무방
+================================ */
+.similar-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f1f5f9;
+}
+.similar-header .left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+.similar-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+.similar-header .pid {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.similar-header .right {
+  display: flex;
+  gap: 8px;
+}
+
+/* 상태 뱃지(로딩/대기 등) */
+.badge-light {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  font-size: 12px;
+  padding: 4px 10px;
+}
+
+/* 칩/라벨 */
+.badge {
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 4px 10px;
+  border: 1px solid transparent;
+}
+.badge-blue { color: #1d4ed8; background: #dbeafe; border-color: #bfdbfe; }
+.badge-red  { color: #b91c1c; background: #fee2e2; border-color: #fecaca; }
+
+/* ================================
+   카드 (두 장이 위아래로 배치됨)
+================================ */
+.similar-card {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #334155;
+  margin-bottom: 16px; /* 카드 간격 */
+}
+.similar-card:last-child {
+  margin-bottom: 0;
+}
+
+/* 카드 헤더 */
+.similar-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.similar-card-head .title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2937;
+  flex: 1;
+}
+.similar-card-head .ext {
+  color: #2563eb;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+  text-decoration: none;
+}
+
+/* 카드 본문 텍스트 */
+.similar-card .desc {
+  margin: 0 0 8px 0;
+  line-height: 1.55;
+  white-space: normal;
+  font-size: 0.92rem;
+  color: #334155;
+}
+
+/* 메타 정보 라인 */
+.similar-card .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* 빈 상태 */
+.similar-empty {
+  background: #ffffff;
+  border: 2px dashed #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #64748b;
+  text-align: center;
+  font-size: 0.92rem;
+}
+
+/* 하단 버튼 줄 */
+.similar-footer {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: 14px;
+}
+
+/* ================================
+   모달 (Team/Personal 선택)
+================================ */
+.sp-modal-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 10000;
+}
+.sp-modal {
+  width: 420px; max-width: 90vw;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  padding: 16px;
+}
+.sp-modal-title {
+  margin: 6px 0 12px;
+  font-size: 1rem;
+}
+.sp-modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+.sp-radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+}
+.sp-help {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* ================================
+   반응형 보조
+================================ */
+@media (max-width: 900px) {
+  .similar-card { padding: 12px; }
+}
