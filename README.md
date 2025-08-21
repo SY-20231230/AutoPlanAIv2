@@ -1,6 +1,6 @@
 # 🚀 AutoPlanAI
 <img src="./images/intro.png" alt="intro" width="600"/> 
-**User-needs-driven AI platform for end-to-end planning → specs → benchmarking → team & Gantt → R&D plan → tool recommendations → code generation.**  
+User-needs-driven AI platform for end-to-end planning → specs → benchmarking → team & Gantt → R&D plan → tool recommendations → code generation. 
 🔗[AutoPlanAI Repository](url)
 ---
 
@@ -53,7 +53,7 @@
 
 **E2E pipeline:** Idea/Plan → Spec v1 & v2 → Similar Projects (Top-3, TF-IDF + Gemini API) → Team Roles → Gantt → **R&D Plan Draft** → Tool Recommendations → Code (SQL/FE/BE)
 
-##🛠️ Tech<br>
+## 🛠️ Tech<br>
 <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=React&logoColor=white">
 <img src="https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=django&logoColor=white">
 <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
@@ -112,17 +112,6 @@
 - **Startup Teams** — Day-1 bootstrap from planning → specs → tools → code scaffold  
 - **R&D Centers** — shorten proposal/report lead time via similar-project search + draft automation  
 - **Hackathons & Competitions** — quickly generate core docs, Gantt, and code skeletons
-
----
-
-## 🧱 Tech Stack & Models
-
-- **Frontend**: React  
-- **Backend**: Django  
-- **AI/LLM**: Gemini API + GPT-OSS (self-hosted)  
-- **Similarity**: TF-IDF retriever + Gemini semantic expansion & LLM re-ranking  
-- **Database**: MySQL  
-- **Timeline (Gantt)**: Excel (.xlsx) export
 
 ---
 
