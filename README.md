@@ -59,9 +59,8 @@ https://github.com/SY-20231230/AutoPlanAIv2
 <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
 <img src="https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
 
-#🤖 **Generative AI**<br>
-
-##AI: Gemini 2.5 Flash
+<h1><b>🤖 Generative AI</b></h1>
+<p style="font-size:14px">Gemini 2.5 Flash</p>
 <img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=flat-square&logo=google-gemini&logoColor=white">
 ---
 
