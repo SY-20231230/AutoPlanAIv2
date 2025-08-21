@@ -1,7 +1,7 @@
 # 🚀 AutoPlanAI
 
 **User-needs-driven AI platform for end-to-end planning → specs → benchmarking → team & Gantt → R&D plan → tool recommendations → code generation.**  
-(영상 링크)
+https://youtu.be/v2r2Xmw58dU
 
 ---
 
@@ -46,9 +46,11 @@
 
 ## 🧭 Architecture & Flow
 
-(아키텍처 이미지 넣을 곳)  
+<img src="./images/flow3.png" alt="Flow Diagram" width="600"/> 
+
 <img src="./images/flow1.png" alt="Flow Diagram" width="300"/> 
-(PPT 캡처 이미지 넣을 곳)
+
+<img src="./images/flow2.png" alt="Flow Diagram" width="600"/> 
 
 **E2E pipeline:** Idea/Plan → Spec v1 & v2 → Similar Projects (Top-3, TF-IDF + Gemini API) → Team Roles → Gantt → **R&D Plan Draft** → Tool Recommendations → Code (SQL/FE/BE)
 
@@ -56,7 +58,7 @@
 
 ## 🧪 Usage (Web UI Flow — detailed)
 
-(영상 링크)
+https://youtu.be/v2r2Xmw58dU
 
 1) **[New Project]**  
    Create a project from the home screen (name/description).
